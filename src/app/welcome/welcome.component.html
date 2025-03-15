@@ -106,11 +106,10 @@
     <p>Your one-stop solution for hassle-free doctor appointments and efficient scheduling.</p>
 
     <div class="button-container">
-      <button class="btn btn-admin" onclick="navigateTo('admin')">Admin Login</button>
-      <button class="btn btn-doctor" onclick="navigateTo('doctor')">Doctor Login</button>
-      <button class="btn btn-patient" onclick="navigateTo('patient')">Patient Login</button>
+    <button class="btn btn-admin" routerLink="/login/admin">Admin Login</button>
+      <button class="btn btn-doctor" routerLink="/login/doctor">Doctor Login</button>
+      <button class="btn btn-patient" [routerLink]="'/login/patient'">Patient Login</button>
     </div>
-
     
   </div>
 </body>
