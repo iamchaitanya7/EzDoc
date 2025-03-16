@@ -18,7 +18,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px 40px;
+            padding: 20px 300px;
             background: #fff;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             position: sticky;
@@ -62,7 +62,7 @@
         }
 
         .nav-links a:hover {
-            color: #4A47A3;
+            color: #413cc6;
             transform: translateY(-2px);
         }
 
@@ -102,18 +102,18 @@
         }
 
         .admin-btn:hover {
-            background: #4A47A3;
+            background: #453fee;
             color: white;
         }
 
         .cta-btn {
-            background: #6776F5;
+            background: #4e5cdf;
             color: white;
             border: none;
         }
 
         .cta-btn:hover {
-            background: #4A47A3;
+            background: #453fee;
         }
 
         @media (max-width: 768px) {
@@ -145,8 +145,8 @@
                 <a [routerLink]="['/contact']">Contact</a>
             </div>
             <div class="btn-container">
-                <button class="admin-btn" [routerLink]="['/login']">Admin Panel</button>
-                <button class="cta-btn" [routerLink]="['/register']">Create Account</button>
+                <button class="admin-btn" [routerLink]="['/login']">Login</button>
+                <button class="cta-btn" [routerLink]="['/register']">Register</button>
             </div>
         </div>
     </nav>

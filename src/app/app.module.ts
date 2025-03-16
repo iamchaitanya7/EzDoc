@@ -15,6 +15,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { AllDoctorsComponent } from './all-doctors/all-doctors.component';
 import { RegisterComponent } from './register/register.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { RegisterComponent } from './register/register.component';
     AboutComponent,
     ContactComponent,
     AllDoctorsComponent,
-    RegisterComponent
+    RegisterComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,7 @@ import { RegisterComponent } from './register/register.component';
     MatInputModule,
     MatButtonModule,
     MatCheckboxModule,
+    MatIconModule,
     ReactiveFormsModule
   ],
   providers: [],
