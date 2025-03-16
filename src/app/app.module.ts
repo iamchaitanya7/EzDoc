@@ -14,6 +14,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { AllDoctorsComponent } from './all-doctors/all-doctors.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AllDoctorsComponent } from './all-doctors/all-doctors.component';
     WelcomeComponent,
     AboutComponent,
     ContactComponent,
-    AllDoctorsComponent
+    AllDoctorsComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
