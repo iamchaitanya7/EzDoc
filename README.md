@@ -1,27 +1,136 @@
-# EzDoc
+# EzDoc – Healthcare Appointment Scheduler
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
+EzDoc is a comprehensive web application designed to streamline the process of scheduling doctor appointments. The platform enables patients to book appointments efficiently while providing doctors with an intuitive interface to manage their schedules.
 
-## Development server
+## 📌 Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Patient Module**:
 
-## Code scaffolding
+  - Register and log in securely.
+  - Browse available doctors by specialization.
+  - Book, view, and manage appointments.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Doctor Module**:
 
-## Build
+  - Register and authenticate securely.
+  - Manage availability and appointment slots.
+  - View and confirm patient appointments.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Admin Module**:
 
-## Running unit tests
+  - Manage users (patients and doctors).
+  - Monitor and oversee appointment activities.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **System Features**:
 
-## Running end-to-end tests
+  - Secure authentication (with role-based access).
+  - Real-time appointment scheduling and notifications.
+  - Responsive UI for seamless access across devices.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🛠️ Tech Stack
 
-## Further help
+### Frontend:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- HTML, CSS, Bootstrap, Material Design
+- Angular (for dynamic UI and client-side logic)
+
+### Backend:
+
+- Java (Spring Boot for RESTful APIs)
+- Hibernate (for ORM and database handling)
+- MySQL (Relational Database Management System)
+
+## 📚 Project Structure
+
+```
+EzDoc/
+├── backend/               # Spring Boot Application
+│   ├── src/main/java/
+│   │     ├── com.ezdoc/  # Main package
+│   │     │      ├── controllers/
+│   │     │      ├── services/
+│   │     │      ├── dao/
+│   │     │      └── exceptions/
+│   └── resources/        # Application configuration
+└── frontend/              # Angular Application
+    ├── src/
+    │   ├── app/
+    │   │    ├── components/
+    │   │    ├── services/
+    │   │    └── pages/
+    └── angular.json
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed on your machine:
+
+- Java Development Kit (JDK 17 or higher)
+- Node.js and npm (for Angular)
+- MySQL Database
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/iamchaitanya7/ezdoc.git
+   cd ezdoc
+   ```
+
+2. **Set up the Backend:**
+
+   - Navigate to the `backend` directory:
+     ```bash
+     cd backend
+     ```
+   - Configure MySQL in `application.properties`:
+
+   ```properties
+   spring.datasource.url=jdbc:mysql://localhost:3306/ezdoc
+   spring.datasource.username=your-username
+   spring.datasource.password=your-password
+   ```
+
+   - Build and run the Spring Boot application:
+
+   ```bash
+   mvn clean install
+   mvn spring-boot:run
+   ```
+
+3. **Set up the Frontend:**
+
+   - Navigate to the `frontend` directory:
+     ```bash
+     cd ../frontend
+     ```
+   - Install dependencies and start the Angular app:
+
+   ```bash
+   npm install
+   ng serve
+   ```
+
+4. **Access the Application:**
+   Open your browser and visit: `http://localhost:4200`
+
+## 🧪 Testing
+
+- Ensure the backend is running on `http://localhost:8080`
+- Ensure the frontend is running on `http://localhost:4200`
+- Validate appointment booking, doctor management, and user flows.
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## 📧 Contact
+
+For any queries or support:
+
+- **Chaitanya Gawali** – [LinkedIn](https://www.linkedin.com/in/chaitanya-gawali)
+- Email: [chaitanyagawalipatil@gmail.com](mailto\:chaitanyagawalipatil@gmail.com)
+
