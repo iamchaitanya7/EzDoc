@@ -19,10 +19,10 @@ const routes: Routes = [
     path: 'login', component: LoginComponent
   },
 
-  //Page Not Found Route (component: PageNotFound)
-  {
-    path: '**', redirectTo: '/welcome', pathMatch: 'full'
-  }
+  // //Page Not Found Route (component: PageNotFound)
+  // {
+  //   path: '**', redirectTo: '/welcome', pathMatch: 'full'
+  // }
 
 
 ];
