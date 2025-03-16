@@ -11,36 +11,59 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
         }
 
         nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             padding: 20px 40px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
         }
 
         .logo {
             height: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
         }
 
         .nav-links {
             display: flex;
-            gap: 40px;
+            gap: 30px;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #000;
+            color: #333;
             font-weight: 600;
             position: relative;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
         .nav-links a:hover {
             color: #4A47A3;
+            transform: translateY(-2px);
         }
 
         .nav-links a.active::after {
@@ -61,18 +84,21 @@
 
         .btn-container {
             display: flex;
-            gap: 20px;
+            gap: 15px;
         }
 
-        .admin-btn {
-            padding: 8px 16px;
-            border: 2px solid #4A47A3;
-            border-radius: 20px;
-            background: transparent;
-            color: #4A47A3;
+        .admin-btn, .cta-btn {
+            padding: 10px 20px;
+            border-radius: 25px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
+        }
+
+        .admin-btn {
+            border: 2px solid #4A47A3;
+            background: transparent;
+            color: #4A47A3;
         }
 
         .admin-btn:hover {
@@ -81,14 +107,9 @@
         }
 
         .cta-btn {
-            padding: 8px 24px;
             background: #6776F5;
             color: white;
             border: none;
-            border-radius: 30px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
         }
 
         .cta-btn:hover {
@@ -96,7 +117,7 @@
         }
 
         @media (max-width: 768px) {
-            nav {
+            .nav-container {
                 flex-direction: column;
                 gap: 20px;
             }
@@ -115,16 +136,18 @@
 <body>
 
     <nav>
-        <img src="assets/images/logos/EzDoc1.png" alt="EzDoc Logo" class="logo">
-        <div class="nav-links">
-            <a [routerLink]="['/welcome']" class="active">Home</a>
-            <a [routerLink]="['/doctors']">All Doctors</a>
-            <a [routerLink]="['/about']">About</a>
-            <a [routerLink]="['/contact']">Contact</a>
-        </div>
-        <div class="btn-container">
-            <button class="admin-btn" [routerLink]="['/login']">Login</button>
-            <button class="cta-btn" [routerLink]="['/register']">Register</button>
+        <div class="nav-container">
+            <img src="assets/images/logos/EzDoc1.png" alt="EzDoc Logo" class="logo">
+            <div class="nav-links">
+                <a [routerLink]="['/welcome']" class="active">Home</a>
+                <a [routerLink]="['/doctors']">All Doctors</a>
+                <a [routerLink]="['/about']">About</a>
+                <a [routerLink]="['/contact']">Contact</a>
+            </div>
+            <div class="btn-container">
+                <button class="admin-btn" [routerLink]="['/login']">Admin Panel</button>
+                <button class="cta-btn" [routerLink]="['/register']">Create Account</button>
+            </div>
         </div>
     </nav>
 
