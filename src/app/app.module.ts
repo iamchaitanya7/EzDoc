@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { AllDoctorsComponent } from './all-doctors/all-doctors.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContactComponent } from './contact/contact.component';
     LoginComponent,
     WelcomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    AllDoctorsComponent
   ],
   imports: [
     BrowserModule,
